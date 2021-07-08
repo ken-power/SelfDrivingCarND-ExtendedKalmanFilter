@@ -6,3 +6,6 @@
 cmake-build-debug
 
 .DS_Store
+
+# Don't store the simulator in GitHub - get it from here: https://github.com/udacity/self-driving-car-sim/releases
+Simulator/
