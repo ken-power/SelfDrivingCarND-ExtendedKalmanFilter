@@ -1,0 +1,8 @@
+
+# Ignore IDE files
+.idea/
+
+# Ignore CMake build files
+cmake-build-debug
+
+.DS_Store
