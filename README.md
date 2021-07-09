@@ -2,6 +2,40 @@
 
 The goal of this project is to use an Extended Kalman Filter (EKF) with noisy LiDAR and RADAR measurements to estimate the state of a moving object of interest. 
 
+# Project Success Criteria
+
+## Code Compilation
+
+
+## Accuracy
+
+The values for `px`, `py`, `vx`, and `vy` RMSE should be less than or equal to these values: `[.11, .11, 0.52, 0.52]`.
+
+The video below shows what the simulator looks like when my C++ program is using its Kalman filter to track the object.
+
+![VIDEO PLACEHOLDER]()
+
+Notes:
+* Lidar measurements are red circles
+* Radar measurements are blue circles with an arrow pointing in the direction of the observed angle,
+* Estimation markers are green triangles
+
+The simulator provides the program with the measurement data (either lidar or radar), and the program feeds back the measured estimation marker and RMSE values from its Kalman filter.
+
+## Algorithm Correctness
+
+### Sensor fusion processing flow
+
+### Kalman filter handles first measurements appropriately
+
+### Kalman filter predicts then updates
+
+### Kalman filter handles RADAR and LiDAR measurements
+
+
+
+## Code Efficiency
+
 
 # Building and running the project
 
