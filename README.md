@@ -4,16 +4,9 @@ The goal of this project is to use an Extended Kalman Filter (EKF) with noisy Li
 
 # Project Success Criteria
 
-## Code Compilation
-
-
-## Accuracy
-
-The values for `px`, `py`, `vx`, and `vy` RMSE should be less than or equal to these values: `[.11, .11, 0.52, 0.52]`.
-
 The video below shows what the simulator looks like when my C++ program is using its Kalman filter to track the object.
 
-![VIDEO PLACEHOLDER]()
+![Simulator communicating with EKF](images/simulator_ekf.gif)
 
 Notes:
 * Lidar measurements are red circles
@@ -21,6 +14,21 @@ Notes:
 * Estimation markers are green triangles
 
 The simulator provides the program with the measurement data (either lidar or radar), and the program feeds back the measured estimation marker and RMSE values from its Kalman filter.
+
+## Code Compilation
+
+## Accuracy
+
+The values for `px`, `py`, `vx`, and `vy` RMSE should be less than or equal to these values: `[.11, .11, 0.52, 0.52]`.
+
+I verified over multiple runs of the simulator that my RMSE values were less than the specified threshold values. These are the values I got:
+
+`px` | `py` | `vx` | `vy`
+---:| ---:| ---:| ---:
+0.0973|0.0855|0.4513|0.4399
+
+![](images/simulator_ekf_1.png)
+
 
 ## Algorithm Correctness
 
