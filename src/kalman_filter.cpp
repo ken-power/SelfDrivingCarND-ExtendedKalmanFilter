@@ -9,10 +9,10 @@ using Eigen::VectorXd;
  */
 
 KalmanFilter::KalmanFilter()
-{}
+= default;
 
 KalmanFilter::~KalmanFilter()
-{}
+= default;
 
 void KalmanFilter::Init(VectorXd & x_in, MatrixXd & P_in, MatrixXd & F_in,
                         MatrixXd & H_in, MatrixXd & R_in, MatrixXd & Q_in)

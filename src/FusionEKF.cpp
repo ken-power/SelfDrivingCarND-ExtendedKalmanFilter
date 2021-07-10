@@ -41,15 +41,13 @@ FusionEKF::FusionEKF()
 * Destructor.
 */
 FusionEKF::~FusionEKF()
-{}
+= default;
 
 void FusionEKF::ProcessMeasurement(const MeasurementPackage & measurement_pack)
 {
-
-
-    /*****************************************************************************
+    /**
      *  Initialization
-     ****************************************************************************/
+     */
     if(!is_initialized_)
     {
         // first measurement
@@ -123,19 +121,15 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage & measurement_pack)
     ekf_.Predict();
 
     /*****************************************************************************
-     *  Update
+     * Update
+     *
+     * Use the sensor type to perform the update step.
+     * Update the state and covariance matrices.
      ****************************************************************************/
-
-    /**
-     TODO:
-       * Use the sensor type to perform the update step.
-       * Update the state and covariance matrices.
-     */
 
     if(measurement_pack.sensor_type_ == MeasurementPackage::RADAR)
     {
         // Radar updates
-        Tools tools;
         ekf_.H_ = tools.CalculateJacobian(ekf_.x_);
         ekf_.R_ = R_radar_;
         ekf_.UpdateEKF(measurement_pack.raw_measurements_);
@@ -149,6 +143,6 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage & measurement_pack)
     }
 
     // print the output
-//    std::cout << "x_ = " << ekf_.x_ << std::endl;
-//    std::cout << "P_ = " << ekf_.P_ << std::endl;
+    std::cout << "x_ = " << ekf_.x_ << std::endl;
+    std::cout << "P_ = " << ekf_.P_ << std::endl;
 }
