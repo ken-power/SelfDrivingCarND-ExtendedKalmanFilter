@@ -1,6 +1,12 @@
 # Extended Kalman Filter Project
 
-The goal of this project is to use an Extended Kalman Filter (EKF) with noisy LiDAR and RADAR measurements to estimate the state of a moving object of interest. 
+This project is part of [Udacity](https://www.udacity.com)'s [Self-driving Car Engineer Nanodegree](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) program. 
+
+
+
+The extended Kalman filter (EKF) is the nonlinear version of the Kalman filter which linearizes about an estimate of the current mean and covariance. In the case of well defined transition models, the EKF has been considered[1] the de facto standard in the theory of nonlinear state estimation, navigation systems, and GPS ([EKF](#References)). The Extended Kalman Filter is also used widely in self-driving cars and sensor fusion.
+
+The goal of this project is to implement an Extended Kalman Filter (EKF) and use the EFK with noisy LiDAR and RADAR measurements to estimate the state of a moving object of interest.
 
 # Project Success Criteria
 
@@ -190,3 +196,21 @@ This project employs [Google's C++ style guide](https://google.github.io/stylegu
 3. Compile: `cmake .. && make`
     * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
 4. Run it: `./ExtendedKF`
+
+# References
+
+* Udacity. [https://www.udacity.com](https://www.udacity.com).
+* Wikipedia. [Kalman Filter](https://en.wikipedia.org/wiki/Kalman_filter).
+* Wikipedia. [Extended Kalman Filter](https://en.wikipedia.org/wiki/Extended_Kalman_filter)  
+* James Teow, 2018. [Understanding Kalman Filters with Python](https://medium.com/@jaems33/understanding-kalman-filters-with-python-2310e87b8f48).
+* Luc Jaulin, 2019. Mobile Robotics, 2nd Edition. _Chapter 7: Kalman Filter._ Wiley.
+* Jean-Claude Bertein, Roger Ceschi, 2007. Discrete Stochastic Processes and Optimal Filtering queue. _Chapter 7: The Kalman Filter_. ISTE. 
+* Bruce P. Gibbs, 2011. Advanced Kalman Filtering, Least-Squares and Modeling: A Practical Handbook. _Chapter 8: Kalman Filtering_. 
+* Rangesh, A. and Trivedi, M.M., 2019. [No Blind Spots: Full-Surround Multi-Object Tracking for Autonomous Vehicles using Cameras & LiDARs](https://arxiv.org/pdf/1802.08755.pdf). IEEE Transactions on Intelligent Vehicles, 4(4), pp.588-599.
+* Chavez-Garcia, R.O. and Aycard, O., 2015. [Multiple sensor fusion and classification for moving object detection and tracking](https://hal.archives-ouvertes.fr/hal-01241846/document). IEEE Transactions on Intelligent Transportation Systems, 17(2), pp.525-534.
+* Shantaiya, S., Verma, K. and Mehta, K., 2015. Multiple object tracking using Kalman filter and optical flow. European Journal of Advances in Engineering and Technology, 2(2), pp.34-39.
+* Jeong, J.M., Yoon, T.S. and Park, J.B., 2014, September. Kalman filter based multiple objects detection-tracking algorithm robust to occlusion. In 2014 Proceedings of the SICE Annual Conference (SICE) (pp. 941-946). IEEE.
+* Chen, X., Wang, X. and Xuan, J., 2018. Tracking multiple moving objects using unscented Kalman filtering techniques. arXiv preprint arXiv:1802.01235.
+* Himmelsbach, M., Mueller, A., Lüttel, T. and Wünsche, H.J., 2008, October. LIDAR-based 3D object perception. In Proceedings of 1st international workshop on cognition for technical systems (Vol. 1).
+* Hwang, S., Kim, N., Choi, Y., Lee, S. and Kweon, I.S., 2016, August. Fast multiple objects detection and tracking fusing color camera and 3D LIDAR for intelligent vehicles. In 2016 13th International Conference on Ubiquitous Robots and Ambient Intelligence (URAI) (pp. 234-239). IEEE.
+* Arya Senna Abdul Rachman, A., 2017. 3D-LIDAR Multi Object Tracking for Autonomous Driving: Multi-target Detection and Tracking under Urban Road Uncertainties.
