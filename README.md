@@ -59,7 +59,8 @@ The main project source files are in the [src](src) folder.
 
 ## Accuracy
 
-The values for `px`, `py`, `vx`, and `vy` RMSE should be less than or equal to these values: `[.11, .11, 0.52, 0.52]`.
+The values for `px`, `py`, `vx`, and `vy` RMSE should be less than or equal to these values: 
+> `[.11, .11, 0.52, 0.52]`.
 
 I verified over multiple runs of the simulator that my RMSE values were less than the specified threshold values. These are the values I got:
 
@@ -72,7 +73,7 @@ I verified over multiple runs of the simulator that my RMSE values were less tha
 
 ## Algorithm Correctness
 
-the three main steps for programming a Kalman filter:
+The three main steps for programming a Kalman filter, which my EFK follows, are:
 
 1. **initializing** the Kalman filter variables
 2. **predicting** where our object is going to be after a time step Δt
@@ -94,6 +95,10 @@ Here is a brief overview of what happens when we run the simulator and program a
 * [main.cpp](src/main.cpp) reads in the data and sends a sensor measurement to [FusionEKF.cpp](src/FusionEKF.cpp).
 * [FusionEKF.cpp](src/FusionEKF.cpp) takes the sensor data and initializes variables and updates variables. The Kalman filter equations are not in this file. FusionEKF.cpp has a variable called `ekf_`, which is an instance of a `KalmanFilter` class. The `ekf_` will hold the matrix and vector values. The program also uses the `ekf_` instance to call the `predict()` and `update()` functions.
 * The `KalmanFilter` class is defined in [kalman_filter.cpp](src/kalman_filter.cpp) and [kalman_filter.h](src/kalman_filter.h). The `KalmanFilter` class contains functions for the prediction and update steps.
+
+This animated GIF provides a zoomed-out view:
+
+![Zoomed-out view of EFK in action](images/simulator_ekf_zoomed_out.gif)
 
 ### Kalman filter handles first measurements appropriately
 
